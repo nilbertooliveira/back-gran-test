@@ -30,7 +30,6 @@ OBS: Portas 80, 8081, 3306, 3000, 6001 e 6379 precisam estar liberadas.
 4. Instalar as dependências e permissões:
     ```
     docker exec app composer install
-    docker exec app npm run build
     sudo chmod -R 777 storage/
     ```
 
