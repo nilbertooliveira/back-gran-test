@@ -47,14 +47,15 @@ class ProductService implements IProductService
      */
     public function findAll(Request $request): ResponseService
     {
-        $cacheKey = 'products_findAll';
+        $cacheKey = 'products_page_'  . $request->string('page')->value();
+
         try {
             if (Cache::has($cacheKey)) {
                 return Cache::get($cacheKey);
             }
             $response = $this->productRepository->findAll($request);
 
-            Cache::set($cacheKey, $response, 60);
+            Cache::set($cacheKey, $response, 30);
 
             return $response;
 
