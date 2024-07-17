@@ -40,12 +40,6 @@ OBS: Portas 80, 8081, 3306, 3000, 6001 e 6379 precisam estar liberadas.
     docker exec app php artisan db:seed
     ```
 
-6. Dados para teste (AWS):
-    ```
-    Host: 54.198.116.11
-    Email: administrator@test.com.br
-    Password: 123456
-    ```
 7. Dados para teste (LOCAL):
     ```
     Host: http://app.local.com.br
